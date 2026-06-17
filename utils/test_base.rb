@@ -8,8 +8,7 @@ class TestBase < Minitest::Test
   def setup
     @driver = Selenium::WebDriver.for SETTINGS[:browser]
 
-    html_path = File.expand_path("../selenium/test_page.html", __dir__)
-    @driver.navigate.to "file:///#{html_path}"
+    @driver.navigate.to SETTINGS[:base_url]
   end
 
   def teardown

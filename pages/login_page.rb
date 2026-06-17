@@ -20,4 +20,8 @@ class LoginPage
     @driver.find_element(class: "title").text
   end
 
+  def mensaje_error
+    @driver.find_element(css: "[data-test='error']").text
+  end
+
 end

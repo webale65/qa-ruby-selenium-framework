@@ -39,7 +39,11 @@ class PurchaseFlowTest < TestBase
     @checkout_page.completar_nombre(CHECKOUT_DATA[:first_name])
     @checkout_page.completar_apellido(CHECKOUT_DATA[:last_name])
     @checkout_page.completar_codigo_postal(CHECKOUT_DATA[:postal_code])
+    
     @checkout_page.click_continue
+
+      
+
     @checkout_page.click_finish
 
     assert_equal(

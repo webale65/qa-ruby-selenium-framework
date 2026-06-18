@@ -6,7 +6,18 @@ require_relative '../config/settings'
 class TestBase < Minitest::Test
 
   def setup
-    @driver = Selenium::WebDriver.for SETTINGS[:browser]
+    options = Selenium::WebDriver::Chrome::Options.new
+
+    options.add_argument("--log-level=3")
+    options.add_argument("--disable-notifications")
+
+    options.add_preference("credentials_enable_service", false)
+    options.add_preference("profile.password_manager_enabled", false)
+
+    @driver = Selenium::WebDriver.for(
+      SETTINGS[:browser],
+      options: options
+    )
 
     @driver.navigate.to SETTINGS[:base_url]
   end

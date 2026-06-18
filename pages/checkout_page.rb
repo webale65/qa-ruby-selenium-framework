@@ -1,7 +1,10 @@
+require_relative '../utils/wait_helper'
+
 class CheckoutPage
 
   def initialize(driver)
     @driver = driver
+    @wait = WaitHelper.new(driver)
   end
 
   def click_checkout
@@ -21,14 +24,18 @@ class CheckoutPage
   end
 
   def click_continue
-    @driver.find_element(id: "continue").click
+  boton = @driver.find_element(id: "continue")
+  @driver.execute_script("arguments[0].click();", boton)
   end
 
   def click_finish
-    @driver.find_element(id: "finish").click
+  @wait.until_visible(:id, "finish")
+  boton = @driver.find_element(id: "finish")
+  @driver.execute_script("arguments[0].click();", boton)
   end
 
   def mensaje_compra_exitosa
+    @wait.until_visible(:class, "complete-header")
     @driver.find_element(class: "complete-header").text
   end
 

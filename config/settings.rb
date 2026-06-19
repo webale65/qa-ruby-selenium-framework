@@ -1,6 +1,6 @@
 SETTINGS = {
   browser: :chrome,
-  base_url: "https://demoqa.com/automation-practice-form",
+  base_url: "https://demoqa.com/webtables",
   wait_time: 5,
   screenshots_enabled: true
 }

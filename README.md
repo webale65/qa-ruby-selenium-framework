@@ -1,6 +1,6 @@
 ## 🚀 Framework QA Automation con Ruby, Selenium y Minitest
 
-![Version](https://img.shields.io/badge/Version-v1.8-blue)
+![Version](https://img.shields.io/badge/Version-v2.2-blue)
 ![CI](https://img.shields.io/badge/CI-GitHub%20Actions-success)
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 
@@ -10,7 +10,7 @@ Este repositorio contiene un Framework de Automatización de Pruebas desarrollad
 
 El proyecto fue construido con fines de aprendizaje práctico y evolución profesional en QA Automation, aplicando conceptos utilizados en entornos reales de testing y aseguramiento de calidad.
 
-Actualmente el framework se encuentra en su versión estable v2.1 e incorpora automatización UI, Page Object Model (POM), Data Driven Testing, Smoke Suite, Regression Suite, API Testing con HTTParty, generación de evidencias automáticas, gestión de dependencias con Bundler, integración continua mediante GitHub Actions y una arquitectura escalable para futuras ampliaciones.
+Actualmente el framework se encuentra en su versión estable v2.2 e incorpora automatización UI, API Testing con HTTParty, Smoke Suite, Regression Suite, gestión de dependencias con Bundler, reportes HTML avanzados, integración continua mediante GitHub Actions y una arquitectura escalable para futuras ampliaciones.
 
 ---
 
@@ -165,7 +165,7 @@ ruby selenium_tests/forms_test.rb
 
 ---
 
-## 📊 Estado Actual del Framework (v2.1)
+## 📊 Estado Actual del Framework (v2.2)
 
 ### Validación de la Suite
 
@@ -195,26 +195,34 @@ ruby selenium_tests/forms_test.rb
 * HTTParty
 * Bundler
 * Dependency Management
+* Advanced HTML Reports
+* Execution Summary Dashboard
+* Pass Rate Calculation
+* Executed Tests Report
+* Framework Information Panel
 * Compatibilidad Windows/Linux
 
 ---
 
 ## 🏷️ Última Release
 
-### v2.1 - API Testing Integration
+### v2.2 - Advanced HTML Reports
 
 Principales mejoras:
 
-* Integración de API Testing mediante HTTParty.
-* Validación de endpoints REST.
-* Validación de Status Codes.
-* Validación de respuestas JSON.
-* Validación de creación de recursos mediante POST.
-* Incorporación de API Test Suite Runner.
+* Execution Summary Dashboard
+* Pass Rate Calculation
+* Execution Date Tracking
+* Executed Tests Section
+* Framework Information Panel
+* Enhanced CSS Styling
+* Professional Report Layout
+
 ---
 
 ## 📦 Historial de Releases
 
+- v2.2 – Advanced HTML Reports
 - v2.1 – API Testing Integration
 - v2.0 – Dependency Management & Selenium Upgrade
 - v1.9 – Smoke & Regression Suites
@@ -232,7 +240,6 @@ Principales mejoras:
 
 ## 🚧 Próximas Mejoras
 
-* Advanced HTML Reports
 * Cross Browser Execution
 * Docker Support
 * Jenkins Integration

@@ -24,14 +24,16 @@ class CheckoutPage
   end
 
   def click_continue
-  boton = @driver.find_element(id: "continue")
-  @driver.execute_script("arguments[0].click();", boton)
+    boton = @driver.find_element(id: "continue")
+    @driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", boton)
+    @driver.execute_script("arguments[0].click();", boton)
   end
 
   def click_finish
-  @wait.until_visible(:id, "finish")
-  boton = @driver.find_element(id: "finish")
-  @driver.execute_script("arguments[0].click();", boton)
+    @wait.until_visible(:id, "finish")
+    boton = @driver.find_element(id: "finish")
+    @driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", boton)
+    @driver.execute_script("arguments[0].click();", boton)
   end
 
   def mensaje_compra_exitosa

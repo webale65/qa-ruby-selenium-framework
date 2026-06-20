@@ -10,7 +10,7 @@ Este repositorio contiene un Framework de Automatización de Pruebas desarrollad
 
 El proyecto fue construido con fines de aprendizaje práctico y evolución profesional en QA Automation, aplicando conceptos utilizados en entornos reales de testing y aseguramiento de calidad.
 
-Actualmente el framework se encuentra en su versión estable v1.8 e incorpora automatización UI, Page Object Model (POM), Data Driven Testing, generación de evidencias automáticas, integración continua mediante GitHub Actions y una arquitectura escalable para futuras ampliaciones.
+Actualmente el framework se encuentra en su versión estable v2.1 e incorpora automatización UI, Page Object Model (POM), Data Driven Testing, Smoke Suite, Regression Suite, API Testing con HTTParty, generación de evidencias automáticas, gestión de dependencias con Bundler, integración continua mediante GitHub Actions y una arquitectura escalable para futuras ampliaciones.
 
 ---
 
@@ -165,7 +165,7 @@ ruby selenium_tests/forms_test.rb
 
 ---
 
-## 📊 Estado Actual del Framework (v1.8)
+## 📊 Estado Actual del Framework (v2.1)
 
 ### Validación de la Suite
 
@@ -189,27 +189,35 @@ ruby selenium_tests/forms_test.rb
 * Git Flow
 * Pull Requests
 * Releases versionadas
+* Smoke Suite
+* Regression Suite
+* API Testing
+* HTTParty
+* Bundler
+* Dependency Management
 * Compatibilidad Windows/Linux
 
 ---
 
 ## 🏷️ Última Release
 
-### v1.8 - GitHub Actions CI/CD
+### v2.1 - API Testing Integration
 
 Principales mejoras:
 
-* Integración continua con GitHub Actions.
-* Configuración de Chrome Headless para CI/CD.
-* Compatibilidad Linux.
-* Runner optimizado para ejecución remota.
-* Estabilización de la suite principal.
-* Validación automática mediante Pull Requests.
-
+* Integración de API Testing mediante HTTParty.
+* Validación de endpoints REST.
+* Validación de Status Codes.
+* Validación de respuestas JSON.
+* Validación de creación de recursos mediante POST.
+* Incorporación de API Test Suite Runner.
 ---
 
 ## 📦 Historial de Releases
 
+- v2.1 – API Testing Integration
+- v2.0 – Dependency Management & Selenium Upgrade
+- v1.9 – Smoke & Regression Suites
 - v1.8 – GitHub Actions CI/CD
 - v1.7 – Documentation & Portfolio Ready
 - v1.6 – DemoQA Buttons
@@ -224,14 +232,12 @@ Principales mejoras:
 
 ## 🚧 Próximas Mejoras
 
-* Allure Reports
-* Ejecución Cross Browser
-* Smoke Suite y Regression Suite
-* Automatización de APIs
-* Jenkins
-* Dockerización del framework
-* Métricas de ejecución
-* Reportes avanzados
+* Advanced HTML Reports
+* Cross Browser Execution
+* Docker Support
+* Jenkins Integration
+* Execution Metrics
+* Advanced Reporting Dashboard
 
 ---
 

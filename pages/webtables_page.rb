@@ -7,6 +7,10 @@ require_relative '../utils/wait_helper'
       @wait = WaitHelper.new(driver)
     end
 
+    def open
+      @driver.navigate.to("https://demoqa.com/webtables")
+    end
+
     def click_add
       @driver.find_element(id: "addNewRecordButton").click
     end

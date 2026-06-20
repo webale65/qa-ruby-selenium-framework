@@ -5,8 +5,9 @@ require_relative '../data/forms_data'
 class FormsTest < TestBase
 
   def setup
-    super
+  super
     @forms_page = FormsPage.new(@driver)
+    @forms_page.open
   end
 
   def test_formulario_exitoso

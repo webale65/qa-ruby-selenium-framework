@@ -4,6 +4,10 @@ class FormsPage
     @driver = driver
   end
 
+  def open
+    @driver.navigate.to("https://demoqa.com/automation-practice-form")
+  end
+
   def completar_nombre(first_name)
     @driver.find_element(id: "firstName").send_keys(first_name)
   end

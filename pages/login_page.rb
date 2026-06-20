@@ -4,6 +4,10 @@ class LoginPage
     @driver = driver
   end
 
+  def open
+    @driver.navigate.to("https://www.saucedemo.com/")
+  end
+
   def ingresar_usuario(username)
     @driver.find_element(id: "user-name").send_keys(username)
   end

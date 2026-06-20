@@ -9,8 +9,9 @@ require_relative '../data/checkout_data'
 class PurchaseFlowTest < TestBase
 
   def setup
-    super
+  super
     @login_page = LoginPage.new(@driver)
+    @login_page.open
     @inventory_page = InventoryPage.new(@driver)
     @cart_page = CartPage.new(@driver)
     @checkout_page = CheckoutPage.new(@driver)
@@ -20,7 +21,7 @@ class PurchaseFlowTest < TestBase
     @login_page.ingresar_usuario(LOGIN_VALID_DATA[:username])
     @login_page.ingresar_password(LOGIN_VALID_DATA[:password])
     @login_page.click_login
-
+   
     @inventory_page.agregar_mochila_al_carrito
     @inventory_page.abrir_carrito
 

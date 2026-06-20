@@ -1,3 +1,3 @@
-Dir["./selenium_tests/*_test.rb"].each do |test_file|
-  require_relative test_file.sub("./", "").sub(".rb", "")
+Dir[File.join(__dir__, "selenium_tests", "*_test.rb")].sort.each do |test_file|
+  require test_file
 end

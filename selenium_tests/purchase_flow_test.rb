@@ -36,7 +36,7 @@ class PurchaseFlowTest < TestBase
     @inventory_page.agregar_mochila_al_carrito
     @inventory_page.abrir_carrito
 
-    @checkout_page.click_checkout
+    @cart_page.click_checkout
     @checkout_page.completar_nombre(CHECKOUT_DATA[:first_name])
     @checkout_page.completar_apellido(CHECKOUT_DATA[:last_name])
     @checkout_page.completar_codigo_postal(CHECKOUT_DATA[:postal_code])

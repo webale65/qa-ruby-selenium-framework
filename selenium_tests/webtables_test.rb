@@ -5,8 +5,9 @@ require_relative '../data/employee_data'
 class WebTablesTest < TestBase
 
   def setup
-    super
+  super
     @webtables_page = WebTablesPage.new(@driver)
+    @webtables_page.open
   end
 
   def test_agregar_y_buscar_empleado

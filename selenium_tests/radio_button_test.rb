@@ -4,8 +4,9 @@ require_relative '../pages/radio_button_page'
 class RadioButtonTest < TestBase
 
   def setup
-    super
+  super
     @radio_page = RadioButtonPage.new(@driver)
+    @radio_page.open
   end
 
   def test_seleccionar_yes

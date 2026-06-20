@@ -7,6 +7,7 @@ class LoginTest < TestBase
   def setup
     super
     @login_page = LoginPage.new(@driver)
+    @login_page.open
   end
 
   def test_login_exitoso

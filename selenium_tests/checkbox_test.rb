@@ -4,8 +4,9 @@ require_relative '../pages/checkbox_page'
 class CheckboxTest < TestBase
 
   def setup
-    super
+  super
     @checkbox_page = CheckboxPage.new(@driver)
+    @checkbox_page.open
   end
 
   def test_seleccionar_home

@@ -4,6 +4,10 @@ class CheckboxPage
     @driver = driver
   end
 
+  def open
+    @driver.navigate.to("https://demoqa.com/checkbox")
+  end
+
   def seleccionar_home
     checkbox_icon = @driver.find_element(xpath: "(//*[local-name()='svg'])[2]")
     checkbox_icon.click

@@ -1,5 +1,6 @@
 require "minitest/autorun"
 require "httparty"
+require "json"
 
 class PostsApiTest < Minitest::Test
   BASE_URL = "https://jsonplaceholder.typicode.com"

@@ -124,6 +124,41 @@ class ReportHelper
           </div>
 
           <div class="card">
+            <h2>Executed Tests</h2>
+
+            <table>
+              <tr>
+                <td><strong>Test Case</strong></td>
+                <td><strong>Status</strong></td>
+              </tr>
+
+              <tr>
+                <td>Login Test</td>
+                <td>Passed</td>
+              </tr>
+
+              <tr>
+                <td>Forms Test</td>
+                <td>Passed</td>
+              </tr>
+
+              <tr>
+                <td>Checkbox Test</td>
+                <td>Passed</td>
+              </tr>
+
+              <tr>
+                <td>Radio Button Test</td>
+                <td>Passed</td>
+              </tr>
+
+              <tr>
+                <td>Buttons Test</td>
+                <td>Passed</td>
+              </tr>
+            </table>
+          </div>
+          <div class="card">
             <h2>Framework Information</h2>
 
             <table>

@@ -1,6 +1,6 @@
 ## 🚀 Framework QA Automation con Ruby, Selenium y Minitest
 
-![Version](https://img.shields.io/badge/Version-v2.2-blue)
+![Version](https://img.shields.io/badge/Version-v2.3-blue)
 ![CI](https://img.shields.io/badge/CI-GitHub%20Actions-success)
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 
@@ -10,7 +10,7 @@ Este repositorio contiene un Framework de Automatización de Pruebas desarrollad
 
 El proyecto fue construido con fines de aprendizaje práctico y evolución profesional en QA Automation, aplicando conceptos utilizados en entornos reales de testing y aseguramiento de calidad.
 
-Actualmente el framework se encuentra en su versión estable v2.2 e incorpora automatización UI, API Testing con HTTParty, Smoke Suite, Regression Suite, gestión de dependencias con Bundler, reportes HTML avanzados, integración continua mediante GitHub Actions y una arquitectura escalable para futuras ampliaciones.
+Actualmente el framework se encuentra en su versión estable v2.3 e incorpora automatización UI, API Testing con HTTParty, Smoke Suite, Regression Suite, gestión de dependencias con Bundler, reportes HTML avanzados, ejecución Cross Browser (Chrome y Firefox), integración continua mediante GitHub Actions y una arquitectura escalable para futuras ampliaciones.
 
 ---
 
@@ -31,9 +31,13 @@ Actualmente el framework se encuentra en su versión estable v2.2 e incorpora au
 * Ruby
 * Selenium WebDriver
 * Minitest
+* HTTParty
+* Bundler
 * Git
 * GitHub
 * GitHub Actions
+* Chrome
+* Firefox
 
 ---
 
@@ -118,9 +122,9 @@ Separación de datos de prueba respecto a la lógica de automatización.
 
 Generación automática de screenshots cuando una prueba falla.
 
-### ✅ Reportes HTML
+### ✅ Reportes HTML Avanzados
 
-Generación de reportes básicos de ejecución.
+Generación de reportes HTML con métricas de ejecución, porcentaje de éxito, fecha de ejecución, resumen de resultados y listado de pruebas ejecutadas.
 
 ### ✅ GitHub Actions (CI/CD)
 
@@ -163,9 +167,21 @@ ruby run_tests.rb
 ruby selenium_tests/forms_test.rb
 ```
 
+### Ejecutar en Chrome
+
+```bash
+BROWSER=chrome bundle exec ruby selenium_tests/buttons_test.rb
+```
+
+### Ejecutar en Firefox
+
+```bash
+BROWSER=firefox bundle exec ruby selenium_tests/buttons_test.rb
+```
+
 ---
 
-## 📊 Estado Actual del Framework (v2.2)
+## 📊 Estado Actual del Framework (v2.3)
 
 ### Validación de la Suite
 
@@ -200,28 +216,32 @@ ruby selenium_tests/forms_test.rb
 * Pass Rate Calculation
 * Executed Tests Report
 * Framework Information Panel
+* Cross Browser Execution
+* Chrome Support
+* Firefox Support
+* Browser Selection via Environment Variables
 * Compatibilidad Windows/Linux
 
 ---
 
 ## 🏷️ Última Release
 
-### v2.2 - Advanced HTML Reports
+### v2.3 - Cross Browser Execution
 
 Principales mejoras:
 
-* Execution Summary Dashboard
-* Pass Rate Calculation
-* Execution Date Tracking
-* Executed Tests Section
-* Framework Information Panel
-* Enhanced CSS Styling
-* Professional Report Layout
+* Browser selection using BROWSER environment variable
+* Chrome execution support
+* Firefox execution support
+* Centralized browser configuration
+* Browser-specific Selenium options
+* Unsupported browser validation
 
 ---
 
 ## 📦 Historial de Releases
 
+- v2.3 – Cross Browser Execution
 - v2.2 – Advanced HTML Reports
 - v2.1 – API Testing Integration
 - v2.0 – Dependency Management & Selenium Upgrade
@@ -240,7 +260,6 @@ Principales mejoras:
 
 ## 🚧 Próximas Mejoras
 
-* Cross Browser Execution
 * Docker Support
 * Jenkins Integration
 * Execution Metrics

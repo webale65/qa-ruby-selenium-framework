@@ -58,3 +58,7 @@ build-iPhoneSimulator/
 # Framework artifacts
 reports/*.html
 screenshots/*.png
+
+# Allure Reports
+allure-results/
+allure-report/

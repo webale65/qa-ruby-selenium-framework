@@ -2,10 +2,12 @@ require 'minitest/autorun'
 require 'selenium-webdriver'
 require 'fileutils'
 require_relative '../config/settings'
+require_relative './allure_helper'
 
 class TestBase < Minitest::Test
 
   def setup
+    @test_start_time = Time.now
     browser = SETTINGS[:browser]
 
     options =
@@ -38,15 +40,27 @@ class TestBase < Minitest::Test
   end
 
   def teardown
+    screenshot_path = nil
+
     if passed?
       puts "Test finalizado correctamente."
     else
-      tomar_captura if SETTINGS[:screenshots_enabled]
+      screenshot_path = tomar_captura if SETTINGS[:screenshots_enabled]
     end
 
-    @driver.quit if @driver
-  rescue
-    puts "El navegador ya estaba cerrado."
+    AllureHelper.write_result(
+      test_name: "#{self.class}##{name}",
+      status: passed? ? 'passed' : 'failed',
+      start_time: @test_start_time,
+      stop_time: Time.now,
+      screenshot_path: screenshot_path
+    )
+
+    begin
+      @driver.quit if @driver
+    rescue
+      puts "El navegador ya estaba cerrado."
+    end
   end
 
   def tomar_captura
@@ -58,6 +72,8 @@ class TestBase < Minitest::Test
     @driver.save_screenshot(file_name)
 
     puts "Captura guardada en: #{file_name}"
+
+    file_name
   end
 
 end

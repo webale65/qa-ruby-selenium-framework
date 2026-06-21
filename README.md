@@ -65,6 +65,8 @@ README.md
 * Ruby
 * Selenium WebDriver
 * Minitest
+* HTTParty
+* Bundler
 * Git
 * GitHub
 * GitHub Actions
@@ -140,8 +142,10 @@ Uso de ramas feature, fix, Pull Requests, merges y releases versionadas.
 
 ### SauceDemo
 
-* Login
+* Login exitoso
+* Login inválido
 * Validación de carrito de compras
+* Flujo E2E de compra
 
 ### DemoQA
 
@@ -150,6 +154,14 @@ Uso de ramas feature, fix, Pull Requests, merges y releases versionadas.
 * Checkboxes
 * Web Tables
 * Buttons
+
+### API Testing (JSONPlaceholder)
+
+* GET Users
+* GET User by ID
+* GET Posts
+* POST Create Post
+* Response Validation
 
 ---
 
@@ -183,13 +195,28 @@ BROWSER=firefox bundle exec ruby selenium_tests/buttons_test.rb
 
 ## 📊 Estado Actual del Framework (v2.3)
 
-### Validación de la Suite
+### Cobertura Actual
 
-* ✅ 9 tests automatizados
-* ✅ 12 aserciones ejecutadas
+#### UI Automation
+
+* ✅ 11 tests
+* ✅ 14 aserciones
+
+#### API Testing
+
+* ✅ 5 tests
+* ✅ 9 aserciones
+
+#### Resultado General
+
+* ✅ 16 tests automatizados
+* ✅ 23 aserciones ejecutadas
 * ✅ 0 fallos
 * ✅ 0 errores
 * ✅ GitHub Actions aprobado
+* ✅ Ejecución validada en Chrome
+* ✅ Ejecución validada en Firefox
+* ✅ API Test Suite aprobada
 
 ### Capacidades Actuales
 
@@ -216,9 +243,7 @@ BROWSER=firefox bundle exec ruby selenium_tests/buttons_test.rb
 * Pass Rate Calculation
 * Executed Tests Report
 * Framework Information Panel
-* Cross Browser Execution
-* Chrome Support
-* Firefox Support
+* Cross Browser Execution (Chrome y Firefox)
 * Browser Selection via Environment Variables
 * Compatibilidad Windows/Linux
 
@@ -260,10 +285,11 @@ Principales mejoras:
 
 ## 🚧 Próximas Mejoras
 
+* Allure Reports Integration
 * Docker Support
-* Jenkins Integration
-* Execution Metrics
-* Advanced Reporting Dashboard
+* Jenkins CI/CD Integration
+* Execution Metrics Dashboard
+* Test Trend Analysis
 
 ---
 

@@ -2,6 +2,7 @@ class FormsPage
 
   def initialize(driver)
     @driver = driver
+    @wait = Selenium::WebDriver::Wait.new(timeout: 10)
   end
 
   def open
@@ -31,11 +32,17 @@ class FormsPage
 
   def enviar_formulario
     boton = @driver.find_element(id: "submit")
+    @driver.execute_script("arguments[0].scrollIntoView(true);", boton)
     @driver.execute_script("arguments[0].click();", boton)
   end
 
   def titulo_modal
-    @driver.find_element(id: "example-modal-sizes-title-lg").text
+    modal_title = @wait.until do
+      element = @driver.find_element(id: "example-modal-sizes-title-lg")
+      element if element.displayed?
+    end
+
+    modal_title.text
   end
 
 end

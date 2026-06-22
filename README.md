@@ -225,6 +225,27 @@ docker compose up
 
 ---
 
+## ⚙️ Jenkins Integration
+
+The framework includes a Jenkins Pipeline configuration for Continuous Integration workflows.
+
+### Pipeline Stages
+
+* Dependency Installation
+* UI Test Execution
+* API Test Execution
+* Artifact Archiving
+
+### Benefits
+
+* Automated execution
+* CI/CD readiness
+* Build traceability
+* Centralized test execution
+* Scalable automation workflows
+
+---
+
 ## 📊 Estado Actual del Framework (v2.5)
 
 ### Cobertura Actual
@@ -277,6 +298,9 @@ docker compose up
 * Framework Information Panel
 * Cross Browser Execution (Chrome y Firefox)
 * Browser Selection via Environment Variables
+* Jenkins Integration
+* Pipeline as Code
+* Automated Build Execution
 * Compatibilidad Windows/Linux
 
 ---

@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                bat 'bundle install'
+            }
+        }
+
+        stage('Run UI Tests') {
+            steps {
+                bat 'bundle exec ruby run_tests.rb'
+            }
+        }
+
+        stage('Run API Tests') {
+            steps {
+                bat 'bundle exec ruby run_api_tests.rb'
+            }
+        }
+    }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'reports/*.html', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'allure-results/*', allowEmptyArchive: true
+        }
+    }
+}

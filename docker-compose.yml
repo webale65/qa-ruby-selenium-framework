@@ -1,0 +1,7 @@
+services:
+  qa-framework:
+    build: .
+    container_name: qa-ruby-selenium-framework
+    environment:
+      - BROWSER=chrome
+    command: bundle exec ruby run_tests.rb

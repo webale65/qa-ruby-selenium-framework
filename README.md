@@ -1,349 +1,299 @@
-## 🚀 Framework QA Automation con Ruby, Selenium y Minitest
+# 🚀 QA Ruby Selenium Framework
 
-![Version](https://img.shields.io/badge/Version-v2.5-blue)
-![CI](https://img.shields.io/badge/CI-GitHub%20Actions-success)
+Framework de Automatización de Pruebas desarrollado con Ruby, Selenium WebDriver y Minitest.
+
+![Version](https://img.shields.io/badge/Version-v2.8.1-blue)
+![Ruby](https://img.shields.io/badge/Ruby-Automation-red)
+![Selenium](https://img.shields.io/badge/Selenium-WebDriver-green)
+![Minitest](https://img.shields.io/badge/TestFramework-Minitest-orange)
+![Docker](https://img.shields.io/badge/Docker-Supported-blue)
+![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-red)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-Enabled-success)
 ![Status](https://img.shields.io/badge/Status-Stable-brightgreen)
 
-### 📋 Descripción
+---
 
-Este repositorio contiene un Framework de Automatización de Pruebas desarrollado con Ruby, Selenium WebDriver y Minitest.
+## 📋 Descripción
 
-El proyecto fue construido con fines de aprendizaje práctico y evolución profesional en QA Automation, aplicando conceptos utilizados en entornos reales de testing y aseguramiento de calidad.
+QA Ruby Selenium Framework es un framework de automatización de pruebas construido con Ruby, Selenium WebDriver y Minitest.
 
-Actualmente el framework se encuentra en su versión estable v2.5 e incorpora automatización UI, API Testing con HTTParty, Smoke Suite, Regression Suite, gestión de dependencias con Bundler, reportes HTML avanzados, ejecución Cross Browser (Chrome y Firefox), integración continua mediante GitHub Actions y una arquitectura escalable para futuras ampliaciones.
+El proyecto fue desarrollado como parte de un proceso de formación y especialización en QA Automation, evolucionando hasta convertirse en una solución completa que incorpora automatización UI, automatización de APIs, ejecución Cross Browser, CI/CD, reportería avanzada y métricas de ejecución.
+
+Actualmente el framework se encuentra validado en entornos locales, Docker, GitHub Actions y Jenkins.
 
 ---
 
 ## 🎯 Objetivos
 
 * Automatizar pruebas funcionales de aplicaciones web.
-* Implementar buenas prácticas de QA Automation.
-* Aplicar el patrón Page Object Model (POM).
-* Gestionar datos de prueba de forma independiente.
-* Generar evidencias automáticas ante fallos.
-* Implementar integración continua (CI/CD).
-* Construir una base escalable para futuros proyectos QA.
+* Aplicar buenas prácticas de QA Automation.
+* Implementar Page Object Model (POM).
+* Integrar pruebas UI y API.
+* Generar reportes y métricas de ejecución.
+* Aplicar integración continua mediante CI/CD.
+* Mantener una arquitectura escalable y mantenible.
 
 ---
 
 ## 🛠 Tecnologías Utilizadas
 
+### Automatización
+
 * Ruby
 * Selenium WebDriver
 * Minitest
 * HTTParty
-* Bundler
+
+### DevOps y CI/CD
+
 * Git
 * GitHub
 * GitHub Actions
+* Jenkins
+* Docker
+
+### Navegadores
+
 * Chrome
 * Firefox
 
 ---
 
-## 📂 Estructura del Proyecto
-
-```text
-config/
-data/
-docs/
-pages/
-reports/
-screenshots/
-selenium_tests/
-utils/
-run_tests.rb
-README.md
-```
-
----
-
-## 🏗️ Arquitectura del Framework
-
-### Tecnologías Base
-
-* Ruby
-* Selenium WebDriver
-* Minitest
-* HTTParty
-* Bundler
-* Git
-* GitHub
-* GitHub Actions
+## 🏗 Arquitectura del Framework
 
 ### Patrones Implementados
 
 * Page Object Model (POM)
 * Data Driven Testing
 * Explicit Waits
-* Evidencias automáticas mediante Screenshots
 
-### Organización del Proyecto
+### Capacidades
 
-* **config/** → Configuración general del framework
-* **data/** → Datos de prueba
-* **docs/** → Documentación técnica y roadmap del framework
-* **pages/** → Implementación de Page Objects
-* **selenium_tests/** → Casos de prueba automatizados
-* **utils/** → Utilidades y helpers
-* **screenshots/** → Evidencias automáticas de fallos
-* **reports/** → Reportes de ejecución
-
-### Integración Continua
-
-* GitHub Actions
-* Chrome Headless
-* Ejecución automática en Pull Requests
-* Compatibilidad Windows y Linux
+* Automatización UI
+* Automatización de APIs
+* Smoke Suite
+* Regression Suite
+* Ejecución Cross Browser
+* Captura automática de evidencias
+* Reportes HTML
+* Allure Reports
+* Execution Metrics Dashboard
+* Integración Jenkins
+* Integración GitHub Actions
+* Docker Support
 
 ---
 
-## ⚙️ Funcionalidades Implementadas
+## 📂 Estructura del Proyecto
 
-### ✅ Selenium WebDriver
+```text
+.github/workflows/
+api_tests/
+config/
+data/
+docs/
+evidence/
+jenkins/
+mocks/
+pages/
+reports/
+screenshots/
+selenium_tests/
+utils/
 
-Automatización de interacciones con aplicaciones web.
-
-### ✅ Minitest
-
-Framework utilizado para ejecución y validación de pruebas automatizadas.
-
-### ✅ Page Object Model (POM)
-
-Separación entre lógica de negocio y elementos de interfaz para mejorar mantenibilidad y reutilización.
-
-### ✅ Explicit Waits
-
-Sincronización robusta de elementos evitando dependencias excesivas de sleep.
-
-### ✅ Data Driven Testing
-
-Separación de datos de prueba respecto a la lógica de automatización.
-
-### ✅ Captura Automática de Evidencias
-
-Generación automática de screenshots cuando una prueba falla.
-
-### ✅ Reportes HTML Avanzados
-
-Generación de reportes HTML con métricas de ejecución, porcentaje de éxito, fecha de ejecución, resumen de resultados y listado de pruebas ejecutadas.
-
-### ✅ GitHub Actions (CI/CD)
-
-Ejecución automática de pruebas en Pull Requests y validación continua del framework.
-
-### ✅ Git Flow
-
-Uso de ramas feature, fix, Pull Requests, merges y releases versionadas.
+Dockerfile
+docker-compose.yml
+Gemfile
+README.md
+```
 
 ---
 
-## 🤖 Automatizaciones Implementadas
+## 🤖 Cobertura Automatizada
 
 ### SauceDemo
 
 * Login exitoso
 * Login inválido
-* Validación de carrito de compras
-* Flujo E2E de compra
+* Carrito de compras
+* Purchase Flow
 
 ### DemoQA
 
 * Forms
-* Radio Buttons
-* Checkboxes
 * Web Tables
+* Check Boxes
+* Radio Buttons
 * Buttons
 
-### API Testing (JSONPlaceholder)
+### API Testing
 
-* GET Users
-* GET User by ID
-* GET Posts
-* POST Create Post
-* Response Validation
+* GET Requests
+* POST Requests
+* Validación de respuestas
 
 ---
 
 ## ▶️ Ejecución de Pruebas
 
-### Ejecutar la suite principal
+### Ejecutar Suite Completa
 
 ```bash
-ruby run_tests.rb
+bundle exec ruby run_tests.rb
 ```
 
-### Ejecutar una prueba específica
+### Ejecutar Smoke Suite
 
 ```bash
-ruby selenium_tests/forms_test.rb
+bundle exec ruby run_smoke_tests.rb
 ```
 
-### Ejecutar en Chrome
+### Ejecutar Regression Suite
 
 ```bash
-BROWSER=chrome bundle exec ruby selenium_tests/buttons_test.rb
+bundle exec ruby run_regression_tests.rb
 ```
 
-### Ejecutar en Firefox
+### Ejecutar API Suite
 
 ```bash
-BROWSER=firefox bundle exec ruby selenium_tests/buttons_test.rb
+bundle exec ruby run_api_tests.rb
+```
+
+---
+
+## 🌐 Ejecución Cross Browser
+
+Chrome:
+
+```bash
+BROWSER=chrome bundle exec ruby run_tests.rb
+```
+
+Firefox:
+
+```bash
+BROWSER=firefox bundle exec ruby run_tests.rb
 ```
 
 ---
 
 ## 🐳 Docker Support
 
-The framework includes Docker support for running automated tests in isolated and reproducible environments.
-
-### Build Docker Image
+Construir imagen:
 
 ```bash
 docker build -t qa-ruby-selenium-framework .
 ```
 
-### Run Test Suite
+Ejecutar framework:
 
 ```bash
 docker run --rm qa-ruby-selenium-framework
 ```
 
-### Run with Docker Compose
+Docker Compose:
 
 ```bash
 docker compose up
 ```
 
-### Benefits
+---
 
-* Consistent execution environments
-* Simplified dependency management
-* Easier CI/CD integration
-* Improved portability across systems
-* Reduced setup time for contributors
+## ⚙️ Integración Jenkins
+
+Pipeline implementado:
+
+* Install Dependencies
+* Run UI Tests - Chrome
+* Run UI Tests - Firefox
+* Run API Tests
+* Generate HTML Report
+* Generate Metrics Dashboard
+* Archive Artifacts
+
+Validado exitosamente mediante Jenkins CI/CD.
 
 ---
 
-## ⚙️ Jenkins Integration
+## 📊 Reportes y Métricas
 
-The framework includes a Jenkins Pipeline configuration for Continuous Integration workflows.
+### HTML Reports
 
-### Pipeline Stages
+Resumen de ejecución y resultados.
 
-* Dependency Installation
-* UI Test Execution
-* API Test Execution
-* Artifact Archiving
+### Allure Reports
 
-### Benefits
+Reportes avanzados con detalle de ejecución.
 
-* Automated execution
-* CI/CD readiness
-* Build traceability
-* Centralized test execution
-* Scalable automation workflows
+### Execution Metrics Dashboard
+
+Métricas disponibles:
+
+* Fecha de ejecución
+* Entorno
+* Navegador
+* Total de pruebas
+* Pruebas exitosas
+* Pruebas fallidas
+* Porcentaje de éxito
+* Estado de ejecución
 
 ---
 
-## 📊 Estado Actual del Framework (v2.5)
+## ✅ Estado de Validación
 
-### Cobertura Actual
+Validado en:
 
-#### UI Automation
-
-* ✅ 11 tests
-* ✅ 14 aserciones
-
-#### API Testing
-
-* ✅ 5 tests
-* ✅ 9 aserciones
-
-#### Resultado General
-
-* ✅ 16 tests automatizados
-* ✅ 23 aserciones ejecutadas
-* ✅ 0 fallos
-* ✅ 0 errores
-* ✅ GitHub Actions aprobado
-* ✅ Ejecución validada en Chrome
-* ✅ Ejecución validada en Firefox
-* ✅ API Test Suite aprobada
-
-### Capacidades Actuales
-
-* Automatización UI
-* Selenium WebDriver
-* Page Object Model
-* Data Driven Testing
-* Explicit Waits
-* Evidencias automáticas
-* Reportes HTML
-* Configuración centralizada
+* Entorno Local
+* Docker
 * GitHub Actions
-* Git Flow
-* Pull Requests
-* Releases versionadas
-* Smoke Suite
-* Regression Suite
-* API Testing
-* HTTParty
-* Bundler
-* Dependency Management
-* Advanced HTML Reports
-* Execution Summary Dashboard
-* Pass Rate Calculation
-* Executed Tests Report
-* Framework Information Panel
-* Cross Browser Execution (Chrome y Firefox)
-* Browser Selection via Environment Variables
-* Jenkins Integration
-* Pipeline as Code
-* Automated Build Execution
-* Compatibilidad Windows/Linux
+* Jenkins
+* Chrome
+* Firefox
 
----
+Estado actual:
 
-## 🏷️ Última Release
-
-### v2.3 - Cross Browser Execution
-
-Principales mejoras:
-
-* Browser selection using BROWSER environment variable
-* Chrome execution support
-* Firefox execution support
-* Centralized browser configuration
-* Browser-specific Selenium options
-* Unsupported browser validation
+**Estable**
 
 ---
 
 ## 📦 Historial de Releases
 
-- v2.3 – Cross Browser Execution
-- v2.2 – Advanced HTML Reports
-- v2.1 – API Testing Integration
-- v2.0 – Dependency Management & Selenium Upgrade
-- v1.9 – Smoke & Regression Suites
-- v1.8 – GitHub Actions CI/CD
-- v1.7 – Documentation & Portfolio Ready
-- v1.6 – DemoQA Buttons
-- v1.5 – DemoQA Radio Button
-- v1.4 – DemoQA CheckBox
-- v1.3 – DemoQA Web Tables
-- v1.2 – DemoQA Forms
-- v1.1 – SauceDemo Purchase Flow
-- v1.0 – Initial Selenium Ruby QA Framework
+* v2.8.1 – Success Rate Format Fix
+* v2.8 – Execution Metrics Dashboard
+* v2.7 – Jenkins Cross Browser Validation
+* v2.6 – Jenkins CI/CD & Reporting Integration
+* v2.5 – Docker Support
+* v2.4 – Framework Enhancements
+* v2.3 – Cross Browser Execution
+* v2.2 – Advanced HTML Reports
+* v2.1 – API Testing Integration
+* v2.0 – Dependency Management & Selenium Upgrade
+
+Historial completo disponible en:
+
+`docs/releases-roadmap.md`
 
 ---
 
-## 🚧 Próximas Mejoras
+## 📚 Documentación
 
-* Jenkins CI/CD Integration
-* Execution Metrics Dashboard
-* Test Trend Analysis
+* docs/framework-architecture.md
+* docs/releases-roadmap.md
+
+---
+
+## 🚀 Próxima Release
+
+### v2.9 - Framework Final Release
+
+Objetivos:
+
+* Consolidación documental
+* Estructura de evidencias
+* Optimización para portfolio profesional
+* Cierre de roadmap del framework
 
 ---
 
@@ -351,11 +301,10 @@ Principales mejoras:
 
 **Alberto Alejandro Pedraza**
 
-QA Tester | Testing Manual | Testing de APIs | QA Automation
+QA Tester | QA Automation | API Testing | Calidad de Software
 
 📍 Argentina
 
 GitHub: https://github.com/webale65
 
 LinkedIn: https://www.linkedin.com/in/alberto-alejandro-pedraza
-

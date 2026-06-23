@@ -1,3 +1,4 @@
+require 'fileutils'
 class ReportHelper
 
   def self.generate(total_tests, passed_tests, failed_tests)
@@ -189,6 +190,7 @@ class ReportHelper
       </html>
     HTML
 
+    FileUtils.mkdir_p("reports")
     File.write("reports/test_report.html", html)
   end
 

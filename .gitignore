@@ -62,3 +62,6 @@ screenshots/*.png
 # Allure Reports
 allure-results/
 allure-report/
+
+# Metrics Dashboard
+reports/*.json

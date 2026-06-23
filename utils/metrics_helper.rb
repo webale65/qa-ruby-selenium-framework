@@ -16,7 +16,7 @@ module MetricsHelper
       total_tests: ENV['TOTAL_TESTS'] || 'N/A',
       passed_tests: ENV['PASSED_TESTS'] || 'N/A',
       failed_tests: ENV['FAILED_TESTS'] || 'N/A',
-      success_rate: ENV['SUCCESS_RATE'] || 'N/A',
+      success_rate: ENV['SUCCESS_RATE'] ? (ENV['SUCCESS_RATE'].include?('%') ? ENV['SUCCESS_RATE'] : "#{ENV['SUCCESS_RATE']}%") : 'N/A',
       status: ENV['BUILD_STATUS'] || 'SUCCESS'
     }
 

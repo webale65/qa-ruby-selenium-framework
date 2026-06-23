@@ -19,6 +19,12 @@ pipeline {
                 bat 'bundle exec ruby run_api_tests.rb'
             }
         }
+
+        stage('Generate HTML Report') {
+            steps {
+                bat 'bundle exec ruby generate_report.rb'
+            }
+        }
     }
 
     post {

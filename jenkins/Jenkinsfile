@@ -8,9 +8,15 @@ pipeline {
             }
         }
 
-        stage('Run UI Tests') {
+        stage('Run UI Tests - Chrome') {
             steps {
-                bat 'bundle exec ruby run_tests.rb'
+                bat 'set BROWSER=chrome&& bundle exec ruby run_tests.rb'
+            }
+        }
+
+        stage('Run UI Tests - Firefox') {
+            steps {
+                bat 'set BROWSER=firefox&& bundle exec ruby selenium_tests/buttons_test.rb'
             }
         }
 
